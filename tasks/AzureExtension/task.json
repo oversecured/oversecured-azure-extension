@@ -1,0 +1,54 @@
+{
+  "id": "2019b673-36a6-4e7c-b6bb-27c6542ad7df",
+  "name": "oversecured-azure-extension",
+  "friendlyName": "Oversecured Azure Extension",
+  "description": "Enterprise vulnerability scanner for Android and iOS apps",
+  "helpMarkDown": "[Oversecured](https://oversecured.com/contact-us)",
+  "category": "Azure Pipelines",
+  "author": "Oversecured",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "10"
+  },
+  "inputs": [
+    {
+      "name": "access_token",
+      "type": "string",
+      "label": "Oversecured API key",
+      "isConfidential": true,
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "name": "integration_id",
+      "type": "string",
+      "label": "Integration ID",
+      "defaultValue": "",
+      "required": true
+    },
+    {
+      "name": "branch_name",
+      "type": "string",
+      "label": "Branch name",
+      "defaultValue": "main",
+      "required": false
+    },
+    {
+      "name": "app_path",
+      "type": "filePath",
+      "label": "App path",
+      "defaultValue": "",
+      "required": true
+    }
+  ],
+  "execution": {
+    "Node16": {
+      "target": "index.js"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "manifestVersion": 1,
+    "id": "oversecured-azure-extension",
+    "publisher": "Oversecured",
+    "version": "1.0.10",
+    "name": "Oversecured Azure Extension",
+    "description": "Enterprise vulnerability scanner for Android and iOS apps",
+    "public": true,
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "tags": [
+        "mobile",
+        "security",
+        "testing",
+        "android",
+        "ios",
+        "ci",
+        "cd",
+        "cicd"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "oversecured-azure-extension-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/AzureExtension"
+            }
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "files": [
+        {
+            "path": "tasks/AzureExtension"
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        },
+        {
+            "path": "images",
+            "addressable": true
+        }
+    ]
+}
